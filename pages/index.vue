@@ -29,13 +29,14 @@ import {
   defineComponent,
   useFetch,
   ref,
-  useContext
+  useContext,
+  useAsync
 } from '@nuxtjs/composition-api'
 
 import { get } from '../network'
 
 export default defineComponent({
-  setup() {
+  setup() {    
     const posts = ref(null)
     
     const { $http } = useContext()
@@ -44,9 +45,7 @@ export default defineComponent({
       const { data } = await get($http, 'https://jsonplaceholder.typicode.com/posts')
       posts.value = data.slice(0, 20)        
     })
-
     return { posts }
-  },
-  fetchOnServer: false
+  }
 })
 </script>
