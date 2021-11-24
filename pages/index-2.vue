@@ -13,7 +13,7 @@
     </template>
 
     <template v-else>
-      <NuxtLink to="/index-2">Less Blog Posts</NuxtLink>
+      <NuxtLink class="text-indigo-800 cursor-pointer" to="/">More Blog Posts</NuxtLink>
       <ul>
         <li v-for="post of posts" :key="post.id">
           <n-link :to="`/posts/${post.id}`">
@@ -37,7 +37,7 @@ import { usePosts } from '../composables/fetch-posts'
 
 export default defineComponent({
   setup (props) {
-    const { posts, fetchPosts } = usePosts()
+    const { posts, fetchPosts } = usePosts(10)
     fetchPosts()
     return { posts }
   }

@@ -1,5 +1,4 @@
 const parseBody = async (res, type = 'json') => {  
-  debugger
   switch (type) {
     case 'blob': return res.blob();
     case 'text': return res.text();
@@ -9,7 +8,6 @@ const parseBody = async (res, type = 'json') => {
 };
 
 const handleError = async res => {
-  debugger
   if (res.ok) return;
 
   const body = await parseBody(res);
@@ -20,7 +18,6 @@ const handleError = async res => {
 };
 
 const parseResponse = async res => {
-  debugger
   if (!res.ok) return handleError(res);
   return {
     message: res.statusText,
