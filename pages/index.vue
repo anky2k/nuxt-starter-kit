@@ -35,7 +35,6 @@ import { usePosts } from '../composables/fetch-posts'
 export default defineComponent({
   setup (props) {
     const { posts, fetchPosts } = usePosts()
-    fetchPosts()
     return { posts }
   }
 })

@@ -1,24 +1,24 @@
 // https://image.nuxtjs.org/components/nuxt-img#modifiers
+// https://cdn-images-1.medium.com/max/30/1*xjGrvQSXvj72W4zD6IWzfg.jpeg
 
 <template>
-    <div class="w-full h-full">    
-        <div
-            v-if="!loaded" 
-            class="rounded-md w-96 h-80 bg-gray-400 animate-pulse blur-md"
-        />            
+    <div class="w-full h-full">        
         <div
             v-if="error" 
-            class="rounded-md w-96 h-80 bg-gray-400 blur-md"
+            :style="`height: ${height}px; width: ${width}px`"
+            class="rounded-md bg-gray-400 blur-md"
         />            
-        <img
-            :loading=loading
-            :alt=alt
-            :height=height
-            :width=width
-            :src=src            
-            @load="setLoaded"
-            @error="setError"
-        />        
+        <div :style="`height: ${height}px; width: ${width}px`">   
+            <img
+                ref="img"
+                loading="lazy"
+                src="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                :alt=alt                
+                @load="onLoaded"
+                @error="setError"
+                class="w-full h-full object-fill"                
+            />        
+        </div>            
     </div>        
 </template>
 
@@ -30,7 +30,7 @@ import {
 import { useLoadedFlag } from '../../composables/is-loaded'
 
 export default defineComponent({
-  name: 'Img',  
+  name: 'Img',    
   props: {
     src: {
       type: String,
@@ -54,13 +54,18 @@ export default defineComponent({
     }
   },
   setup (props) {
-    const { loaded, setLoaded, error, setError } = useLoadedFlag()    
-    return { 
-        loaded, 
-        setLoaded,
+    const { error, setError } = useLoadedFlag()    
+    return {        
         error,
         setError
     }
-  }  
+  },
+  methods: {
+      onLoaded: function (e) {
+        if(this.$refs.img.src !== this.$props.src) {
+            this.$refs.img.src = this.$props.src
+        }
+      }
+  }
 })
 </script>

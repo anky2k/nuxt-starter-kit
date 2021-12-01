@@ -32,7 +32,7 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss'    
+    '@nuxtjs/tailwindcss'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -44,10 +44,6 @@ export default {
     // https://image.nuxtjs.org/getting-started/installation
     '@nuxt/image'
   ],
-
-  image: {
-    domains: ['https://picsum.photos']
-  },
 
   "compilerOptions": {
     "types": ["@nuxt/types", "@nuxt/image"]

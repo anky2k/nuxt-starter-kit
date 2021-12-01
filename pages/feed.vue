@@ -33,42 +33,42 @@ export default {
             {
                 id: '1',
                 name: 'Movie',
-                url: "https://picsum.photos/seed/movie/1200/900"
+                url: "https://s.foxdcg.com/dcg/img/Fox_Networks_DCG_-_FOX_Broadcasting/789/689/okop108.jpg"
             },
             {
                 id: '2',
                 name: 'Show',
-                url: "https://picsum.photos/seed/show/1200/900"
+                url: "https://s.foxdcg.com/dcg/img/Fox_Networks_DCG_-_FOX_Broadcasting/789/189/tr509.jpg"
             },
             {
                 id: '3',
                 name: 'Music',
-                url: "https://picsum.photos/seed/music/1200/900"
+                url: "https://s.foxdcg.com/dcg/img/Fox_Networks_DCG_-_FOX_Broadcasting/786/837/tms611.jpg"
             },
             {
                 id: '4',
                 name: 'News',
-                url: "https://picsum.photos/seed/news/1200/900"
+                url: "https://s.foxdcg.com/dcg/img/Fox_Networks_DCG_-_FOX_Broadcasting/787/313/alt109.jpg"
             },
             {
                 id: '5',
                 name: 'Sports',
-                url: "https://picsum.photos/seed/sports/1200/900"
+                url: "https://s.foxdcg.com/dcg/img/Fox_Networks_DCG_-_FOX_Broadcasting/787/313/alt109.jpg?fit=inside%7C278:156"
             },
             {
                 id: '6',
                 name: 'Food',
-                url: "https://picsum.photos/seed/food/1200/900"
+                url: "https://s.foxdcg.com/dcg/img/Fox_Networks_DCG_-_FOX_Broadcasting/789/189/tr509.jpg"
             },
             {
                 id: '2',
                 name: 'Show',
-                url: "https://picsum.photos/seed/a/1200/900"
+                url: "https://s.foxdcg.com/dcg/img/Fox_Networks_DCG_-_FOX_Broadcasting/786/837/tms611.jpg"
             },
             {
                 id: '3',
                 name: 'Music',
-                url: "https://picsum.photos/seed/b/1200/900"
+                url: "https://s.foxdcg.com/dcg/img/Fox_Networks_DCG_-_FOX_Broadcasting/787/313/alt109.jpg?fit=inside%7C278:156"
             },
             {
                 id: '4',
