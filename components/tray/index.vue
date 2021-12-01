@@ -20,8 +20,8 @@
           <template v-slot:TrayContentContainer="{item}"> 
                <Img
                   alt="some image"
-                  height="900"
-                  width="1200"
+                  height="252"
+                  width="448"
                   :src=item.url
                 />
           </template>  
