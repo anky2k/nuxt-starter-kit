@@ -18,6 +18,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '../assets/css/global.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -40,7 +41,17 @@ export default {
     '@nuxt/http',
     // https://composition-api.nuxtjs.org/getting-started/setup
     '@nuxtjs/composition-api/module',
+    // https://image.nuxtjs.org/getting-started/installation
+    '@nuxt/image'
   ],
+
+  image: {
+    domains: ['https://picsum.photos']
+  },
+
+  "compilerOptions": {
+    "types": ["@nuxt/types", "@nuxt/image"]
+  },
   
   // http: {
   //   proxyHeaders: false,

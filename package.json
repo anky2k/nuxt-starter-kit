@@ -17,6 +17,7 @@
     "vue-content-placeholders": "^0.2.1"
   },
   "devDependencies": {
+    "@nuxt/image": "^0.6.0",
     "@nuxt/types": "^2.15.7",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/tailwindcss": "^4.2.0",
@@ -25,6 +26,7 @@
     "babel-jest": "^27.0.5",
     "jest": "^27.0.5",
     "postcss": "^8.3.5",
+    "tailwind-scrollbar-hide": "^1.1.6",
     "ts-jest": "^27.0.3",
     "vue-jest": "^3.0.4"
   }
