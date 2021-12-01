@@ -27,10 +27,7 @@
 
 <script>
 import {
-  defineComponent,
-  // ref,
-  // useContext,
-  // useAsync
+  defineComponent,  
 } from '@nuxtjs/composition-api'
 
 import { usePosts } from '../composables/fetch-posts'
