@@ -8,17 +8,31 @@
             :style="`height: ${height}px; width: ${width}px`"
             class="rounded-md bg-gray-400 blur-md"
         />            
-        <div :style="`height: ${height}px; width: ${width}px`">   
+        <div 
+          v-if="mode === 'fixed'" 
+          :style="`height: ${height}px; width: ${width}px`">   
             <img
                 ref="img"
-                loading="lazy"
+                loading="lazy"                
                 src="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                 :alt=alt                
                 @load="onLoaded"
-                @error="setError"
+                @error.native="setError"
                 class="w-full h-full object-fill"                
             />        
         </div>            
+        <img
+          v-else
+          ref="img"
+          loading="lazy"
+          :height="height"
+          :width="width"
+          src="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+          :alt=alt                
+          @load="onLoaded"
+          @error="setError"
+          class="w-full h-full object-fill"                
+        />        
     </div>        
 </template>
 
@@ -35,6 +49,10 @@ export default defineComponent({
     src: {
       type: String,
       default: () => '',
+    },
+    mode: {
+      type: String,
+      default: () => 'responsive',
     },
     height: {
       type: String,

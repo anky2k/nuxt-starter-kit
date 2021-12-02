@@ -29,8 +29,8 @@
 </template>
 
 <script>
-import TrayContent from './TrayContent.vue';
-import Img from '../commons/Img.vue';
+import TrayContent from './tray-content.vue';
+import Img from '../commons/img.vue';
 
 export default {
   name: 'Tray',

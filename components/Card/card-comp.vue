@@ -73,11 +73,6 @@
 <script>
 export default {
   name: 'CardComp',
-  props: {
-    item: {
-      type: Object,
-      default: () => ({}),
-    }
-  },
+  props: ['item'],
 }
 </script>

@@ -1,29 +1,32 @@
 <template>
-  <div v-if="isLoaded">
-    <CardComp      
-      :item="item"
-    />
-  </div>  
-  <div v-else>
-    <CardLoader />
-  </div>  
+  <div>
+    <div v-if="fetchState === 'pending'">
+      <CardLoader />
+    </div>    
+    <div v-else-if="fetchState === 'failed'">
+      some error
+    </div>    
+    <div v-else>
+      <CardComp      
+        :item="item[0]"
+      />    
+    </div>  
+  </div>    
 </template>
 
 <script>
-import CardLoader from './Loader.vue'
-import CardComp from './CardComp.vue'
+import CardLoader from './loader.vue'
+import CardComp from './card-comp.vue'
 
 export default {
   name: 'Card',
-  props: {
-    item: {
-      type: Object,
-      default: () => ({}),
-    },
-    isLoaded: {
-      type: Boolean,
-      default: true,
-    },
+  components: {
+    CardComp,
+    CardLoader
   },
+  mounted(){
+    console.log("inside card component",this.item, this.fetchState)
+  },
+  props: ['item', 'fetchState']
 }
 </script>

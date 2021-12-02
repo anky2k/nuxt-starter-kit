@@ -42,7 +42,7 @@ export default {
     // https://composition-api.nuxtjs.org/getting-started/setup
     '@nuxtjs/composition-api/module',
     // https://image.nuxtjs.org/getting-started/installation
-    '@nuxt/image'
+    '@nuxt/image',
   ],
 
   "compilerOptions": {
