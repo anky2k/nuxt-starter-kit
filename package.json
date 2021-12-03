@@ -31,6 +31,7 @@
     "imagemin-svgo": "^10.0.0",
     "jest": "^27.0.5",
     "lqip-loader": "^2.2.1",
+    "msw": "^0.35.0",
     "postcss": "^8.3.5",
     "responsive-loader": "^2.3.0",
     "sharp": "^0.29.3",
@@ -39,5 +40,8 @@
     "ts-jest": "^27.0.3",
     "vue-jest": "^3.0.4",
     "webp-loader": "^0.6.0"
+  },
+  "msw": {
+    "workerDirectory": "static"
   }
 }

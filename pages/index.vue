@@ -14,6 +14,7 @@
 
     <template v-else>
       <NuxtLink to="/index-2">Less Blog Posts</NuxtLink>
+      <div>{{homePageLayout}}</div>
       <ul>
         <li v-for="post of posts" :key="post.id">
           <n-link :to="`/posts/${post.id}`">
@@ -31,11 +32,13 @@ import {
 } from '@nuxtjs/composition-api'
 
 import { usePosts } from '../composables/fetch-posts'
+import { useHomePage } from '../composables/fetch-home-page-layout'
 
 export default defineComponent({
   setup (props) {
-    const { posts, fetchPosts } = usePosts()
-    return { posts }
+    const { posts } = usePosts()
+    const { homePageLayout } = useHomePage()
+    return { posts, homePageLayout }
   }
 })
 </script>
