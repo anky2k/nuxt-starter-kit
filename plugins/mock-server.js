@@ -1,5 +1,8 @@
-// NEW
-if (process.env.NODE_ENV === 'development' && process.client) {
-    const { worker } = require('../mock/browser')
-    worker.start()
+export default (context) => {
+    if (process.client && context.env.MOCK_MODE === 'true') {
+        const { worker } = require('../mock/browser.js')
+        worker.start()
+    }
 }
+
+

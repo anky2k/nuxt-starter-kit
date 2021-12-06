@@ -51,6 +51,11 @@ export default {
   "compilerOptions": {
     "types": ["@nuxt/types", "@nuxt/image"]
   },
+
+  env: {
+    MOCK_MODE: process.env.MOCK,
+  },
+  
   
   // http: {
   //   proxyHeaders: false,

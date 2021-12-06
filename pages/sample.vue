@@ -6,7 +6,7 @@
     
 <script>
     import withComponentState from "../hoc/with-component-state"
-    import SampleComponent from '../components/sample-comp.vue'
+    import SampleComponent from '../components/sample-comp/sample-comp.vue'
 
     const WSampleComponent = withComponentState(SampleComponent, mockData => (true) );    
 

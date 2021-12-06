@@ -1,6 +1,6 @@
 
 import { getDateDiffSeconds } from '../utils/date';
-import { loadMockServer } from '../mock';
+import { loadMockServer } from '../mock/browser';
 
 const RETRY_COUNT = 3;
 const RETRY_DELAY = 500;
