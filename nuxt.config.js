@@ -24,8 +24,10 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '@/plugins/placeholders.js',
-    '@/plugins/mock-server.js'
+    '@/plugins/mock.js'
   ],
+
+  serverMiddleware: ['@/server-middleware/mock'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
