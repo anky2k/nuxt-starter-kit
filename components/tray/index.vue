@@ -1,35 +1,26 @@
 <template>  
-    <!-- <div
-        class="rail"        
-      >
-        <TrayContent     
-          :items="items"     
-        >
-          <template v-slot:TrayContentContainer>            
-              <slot
-                :items="items"
-                name="TrayContent"          
-              >
-              </slot>             
-          </template>        
-      </TrayContent>
-    </div>     -->    
-        <TrayContent     
-          :items=items    
-        >
-          <template v-slot:TrayContentContainer="{item}"> 
-               <Img
-                  alt="some image"
-                  height="252"
-                  width="448"
-                  :src=item.url
-                />
+  <TrayContent     
+      :items=items    
+    >
+      <template v-slot:TrayContentContainer="{item}"> 
+        <Img
+          alt="some image"
+          height="252"
+          width="448"
+          :src=item.url
+        />
+        <Static>
+          <template v-slot:StaticContent> 
+            <span>{{item.name}}</span>
           </template>  
-      </TrayContent>
+        </Static>        
+      </template>  
+  </TrayContent>
 </template>
 
 <script>
 import TrayContent from './tray-content.vue';
+import Static from '../commons/static.vue';
 import Img from '../commons/img.vue';
 
 export default {
@@ -42,6 +33,7 @@ export default {
   },
   components: {
     TrayContent,
+    Static,
     Img
   }  
 }
