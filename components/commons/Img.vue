@@ -37,13 +37,9 @@
 </template>
 
 <script>
-import {
-  defineComponent,  
-} from '@nuxtjs/composition-api'
-
 import { useLoadedFlag } from '../../composables/is-loaded'
 
-export default defineComponent({
+export default {
   name: 'Img',    
   props: {
     src: {
@@ -85,5 +81,5 @@ export default defineComponent({
         }
       }
   }
-})
+}
 </script>

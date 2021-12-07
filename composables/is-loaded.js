@@ -1,4 +1,4 @@
-import { ref } from '@nuxtjs/composition-api'
+import { ref } from '#imports'
 
 export function useLoadedFlag () {
   const loaded = ref(false)

@@ -27,18 +27,14 @@
 </template>
 
 <script>
-import {
-  defineComponent,  
-} from '@nuxtjs/composition-api'
-
 import { usePosts } from '../composables/fetch-posts'
 import { useHomePage } from '../composables/fetch-home-page-layout'
 
-export default defineComponent({
+export default {
   setup (props) {
     const { posts } = usePosts()
     const { homePageLayout } = useHomePage()
     return { posts, homePageLayout }
   }
-})
+}
 </script>

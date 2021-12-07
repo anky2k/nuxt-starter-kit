@@ -1,4 +1,6 @@
-export default {
+import { defineNuxtConfig } from '@nuxt/bridge'
+
+export default defineNuxtConfig({
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'nuxt-starter',
@@ -27,15 +29,11 @@ export default {
     '@/plugins/mock.js'
   ],
 
-  serverMiddleware: ['@/server-middleware/mock'],
-
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
+  buildModules: [    
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss'
   ],
@@ -43,9 +41,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://http.nuxtjs.org/
-    '@nuxt/http',
-    // https://composition-api.nuxtjs.org/getting-started/setup
-    '@nuxtjs/composition-api/module',
+    '@nuxt/http',    
     // https://image.nuxtjs.org/getting-started/installation
     '@nuxt/image',
   ],
@@ -73,4 +69,5 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
-}
+});
+

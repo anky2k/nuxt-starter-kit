@@ -26,16 +26,13 @@
 </template>
 
 <script>
-import {
-  defineComponent,  
-} from '@nuxtjs/composition-api'
 
-import { usePosts } from '../composables/fetch-posts'
+// import { usePosts } from '../composables/fetch-posts'
 
-export default defineComponent({
+export default {
   setup (props) {
-    const { posts, fetchPosts } = usePosts(10)
-    return { posts }
+    // const { posts } = usePosts(10)
+    return { posts: {} }
   }
-})
+}
 </script>
