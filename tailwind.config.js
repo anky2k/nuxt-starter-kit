@@ -4,7 +4,7 @@ module.exports = {
   future: {
     removeDeprecatedGapUtilities: true
   },
-  purge: [
+  content: [
     "./components/**/*.vue",
     "./layouts/**/*.vue",
     "./pages/**/*.vue",

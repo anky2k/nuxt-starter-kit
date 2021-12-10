@@ -5,16 +5,7 @@
 </template>
 
 <script>
-    export default {
-        // props:{
-        //     options:{
-        //         type: Object,
-        //         default: {
-        //             root: null,
-        //             threshold: "0"
-        //         }                
-        //     }
-        // },
+    export default {        
         data() {
             return {
                 observer: null
