@@ -18,7 +18,7 @@ module.exports = {
     "./nuxt.config.ts"
   ],
   presets: [],
-  darkMode: false, // or 'media' or 'class'
+  media: false, // or 'media' or 'class'
   theme: {
     screens: {
       sm: '640px',
