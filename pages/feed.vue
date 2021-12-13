@@ -3,22 +3,21 @@
     <Tray 
         :items=items
     />
-    <div v-if="show">
+    <!-- <div v-if="show">
         <AsyncComponent />
-    </div>  
+    </div>   -->
   </div>
 </template>
 
 <script>
 
 import Tray from '../components/tray'
-import AsyncComponent from '../components/async-example/async'
+// import AsyncComponent from '../components/async-example/async'
 
 export default {
     name: 'Feed',
     components: {
-        Tray,
-        AsyncComponent
+        Tray
     },  
     mounted() {
         setTimeout(() => this.show = true, 1000)

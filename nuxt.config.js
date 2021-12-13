@@ -13,7 +13,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]    
+    ],
+    bodyAttrs: {
+      class: 'h-screen bg-gray-900'
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -45,14 +48,8 @@ export default {
     // https://http.nuxtjs.org/
     '@nuxt/http',
     // https://composition-api.nuxtjs.org/getting-started/setup
-    '@nuxtjs/composition-api/module',
-    // https://image.nuxtjs.org/getting-started/installation
-    '@nuxt/image',
+    '@nuxtjs/composition-api/module'    
   ],
-
-  "compilerOptions": {
-    "types": ["@nuxt/types", "@nuxt/image"]
-  },
 
   env: {
     MOCK_MODE: process.env.MOCK,
