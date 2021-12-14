@@ -9,7 +9,8 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      { 'http-equiv': 'Accept-CH', content: 'DPR, Width, Viewport-Width' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -27,7 +28,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '@/plugins/placeholders.js',
-    '@/plugins/mock.js'
+    '@/plugins/mock.js',
+    '@/plugins/device-detection.js',
   ],
 
   serverMiddleware: ['@/server-middleware/mock'],

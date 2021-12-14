@@ -1,7 +1,7 @@
 <template>
   <div
       v-if="error"
-      "class="`rounded md:rounded-lg lg:rounded-lg bg-gray-400 blur-md ${dimensions}`"
+      :class="`rounded md:rounded-lg lg:rounded-lg bg-gray-400 blur-md ${dimensions}`"
   />            
   <img
     v-else
