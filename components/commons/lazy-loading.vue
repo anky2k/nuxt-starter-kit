@@ -22,7 +22,7 @@
         },
         methods: {
             handleIntersect(entry) {
-                if (entry.isIntersecting) this.$emit("triggerIntersected")
+                if (entry.isIntersecting) this.$emit("triggerIntersected", entry)
             }
         }
     }

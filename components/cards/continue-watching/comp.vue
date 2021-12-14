@@ -2,7 +2,7 @@
   <div class="flex justify">
     <div class="flex-col">
       <ImgComp    
-        :dimensions="'w-36 h-20 md:w-72 md:h-44 lg:w-72 lg:h-44'"
+        :dimensions="'w-36 h-20 md:w-72 md:h-44 lg:w-72 lg:h-44 hover:shadow-lg hover:shadow-white/30 hover:scale-105 transition duration-500'"
         :alt="item.alt"
         :src="item.url" />      
       <div class="play-icon-mob md:play-icon lg:play-icon" />    
