@@ -14,7 +14,7 @@
       v-for="item in items" 
       :key="item.id"
       data-testid="dt-tray-content"
-      class="card h-full m-1 flex-shrink-0 block transform"
+      class="card h-full m-1 flex-shrink-0 block transform cursor-pointer"
     >
       <slot 
         :item="item"
