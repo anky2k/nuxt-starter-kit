@@ -70,7 +70,7 @@
 </template>
 
 <script>
-import Shimmer from '../commons/shimmer.vue'
+import Shimmer from '../../commons/shimmer.vue'
 
 export default {
   name: 'CardLoader',

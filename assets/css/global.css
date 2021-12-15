@@ -6,20 +6,46 @@
     margin: 0;
 }
 
-.rail{
-  @apply w-full;
-  @apply inline-flex;
-  @apply overflow-x-auto;
-  @apply scrollbar-hide;    
+@layer components {
+  .play-icon {
+    position: absolute;
+    display: block;
+    background: url(http://www.slatecube.com/images/play-btn.png);
+    height: 100%;
+    width: 100%;
+    top: 115px;
+    left: 20px;
+    background-size: 35px 35px;
+    background-repeat: no-repeat;    
+  }
+
+  .play-icon-mob {
+    position: absolute;
+    display: block;
+    background: url(http://www.slatecube.com/images/play-btn.png);
+    height: 100%;
+    width: 100%;
+    top: 55px;
+    left: 10px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+  }
+
+  .rail{
+    @apply w-full;
+    @apply inline-flex;
+    @apply overflow-x-auto;
+    @apply scrollbar-hide;    
+  }
+  
+  .card{
+    position: relative;
+    display: block;
+    /* transition: transform 400ms; */
+  }
 }
 
-.card{
-  position: relative;
-  display: block;
-  transition: transform 400ms;
-}
-
-.rail:focus-within .card,
+/* .rail:focus-within .card,
 .rail:hover .card {
   transform: translateX(-25%);
 }
@@ -33,4 +59,4 @@
 .rail .card:hover {
   transform: scale(1.5);
   z-index: 1;
-}
+} */

@@ -9,11 +9,15 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      { 'http-equiv': 'Accept-CH', content: 'DPR, Width, Viewport-Width' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]    
+    ],
+    bodyAttrs: {
+      class: 'h-screen bg-gray-900'
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -24,7 +28,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '@/plugins/placeholders.js',
-    '@/plugins/mock.js'
+    '@/plugins/mock.js',
+    '@/plugins/device-detection.js',
   ],
 
   serverMiddleware: ['@/server-middleware/mock'],
@@ -37,7 +42,8 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/svg'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -45,14 +51,8 @@ export default {
     // https://http.nuxtjs.org/
     '@nuxt/http',
     // https://composition-api.nuxtjs.org/getting-started/setup
-    '@nuxtjs/composition-api/module',
-    // https://image.nuxtjs.org/getting-started/installation
-    '@nuxt/image',
+    '@nuxtjs/composition-api/module'    
   ],
-
-  "compilerOptions": {
-    "types": ["@nuxt/types", "@nuxt/image"]
-  },
 
   env: {
     MOCK_MODE: process.env.MOCK,
