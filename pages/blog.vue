@@ -32,7 +32,7 @@ import {
 } from '@nuxtjs/composition-api'
 
 import { usePosts } from '../composables/fetch-posts'
-import { useHomePage } from '../composables/fetch-home-page-layout'
+import { useHomePage } from '../composables/fetch-and-process-layout'
 
 export default defineComponent({
   setup (props) {

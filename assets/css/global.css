@@ -35,6 +35,8 @@
     @apply w-full;
     @apply inline-flex;
     @apply overflow-x-auto;
+    @apply overflow-y-hidden;
+    @apply max-h-fit;
     @apply scrollbar-hide;    
   }
   

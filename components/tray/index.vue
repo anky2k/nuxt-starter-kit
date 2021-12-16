@@ -3,7 +3,7 @@
       :items=items    
     >
       <template v-slot:TrayContentContainer="{item}"> 
-        <Img
+        <ImgComp
           alt="some image"
           height="252"
           width="448"
@@ -21,7 +21,7 @@
 <script>
 import TrayContent from './tray-content.vue';
 import Static from '../commons/static.vue';
-import Img from '../commons/img.vue';
+import ImgComp from '../commons/img.vue'
 
 export default {
   name: 'Tray',
@@ -34,7 +34,7 @@ export default {
   components: {
     TrayContent,
     Static,
-    Img
+    ImgComp
   }  
 }
 </script>
